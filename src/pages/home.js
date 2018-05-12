@@ -1,11 +1,8 @@
 import React from 'react'
 
-export default class Home extends React.Component {
-  render () {
-    return (
-      <div>
-        Soy Home
-      </div>
-    )
-  }
-}
+export default () => (
+  <div>
+    Soy home
+  </div>
+)
+
