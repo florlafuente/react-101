@@ -2,7 +2,7 @@ import React from 'react'
 
 export default () => (
   <div>
-    Soy About
+    <p>Soy home</p>
   </div>
 )
 
