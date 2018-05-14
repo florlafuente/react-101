@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 import FormInput from '../FormInput'
 
 export default class extends Component {
@@ -14,11 +15,21 @@ export default class extends Component {
   handleInputChange = (e) => {
     const value = e.target.value
     const name = e.target.name
-    this.setState({ [name]: value }, () => console.log(this.state))
+    this.setState({ [name]: value })
   }
-  handleSubmit = (e) => {
+
+  handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('on Submit')
+    try {
+      const res = await axios.post('https://flor-api.now.sh/mailer', {
+        'headers': {
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
+      console.log(res)
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   render () {
