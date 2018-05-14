@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import MenuItem from '../MenuItem'
 
-const links = [
-  { 
-    'path': '/',
-    'name': 'Home'
-  },
-  { 
-    'path': '/about',
-    'name': 'About'
+export default class extends Component {
+  constructor(props){
+    super(props)
+    this.links = [
+        { 
+          'path': '/',
+          'name': 'Home'
+        },
+        { 
+          'path': '/about',
+          'name': 'About'
+        }
+    ]
   }
-]
-
-export default () => (
-  <nav>
-    {links.map((link, i) => (
-      <MenuItem
-        path={link.path}
-        name={link.name} />
-    ))}
-  </nav>
-)
+  render() {
+    return (
+      <nav>
+        <div className='nav-wrapper'>
+          <NavLink to='/' className='brand-logo'>Flor Lafuente</NavLink>
+          <ul id='nav-mobile' className='right hide-on-med-and-down'>
+          {this.links.map((link, i) => (
+            <MenuItem
+              path={link.path}
+              name={link.name} />
+          ))}
+          </ul>
+        </div>
+      </nav>
+    )
+  }
+}
