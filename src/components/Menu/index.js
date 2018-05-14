@@ -13,12 +13,20 @@ export default class extends Component {
         { 
           'path': '/about',
           'name': 'About'
+        },
+        {
+          'path': '/api-example',
+          'name': 'Api example'
+        },
+        {
+          'path': '/contact',
+          'name': 'Contact'
         }
     ]
   }
   render() {
     return (
-      <nav>
+      <nav className='cyan'>
         <div className='nav-wrapper'>
           <NavLink to='/' className='brand-logo'>Flor Lafuente</NavLink>
           <ul id='nav-mobile' className='right hide-on-med-and-down'>
