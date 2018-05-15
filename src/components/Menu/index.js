@@ -26,17 +26,12 @@ export default class extends Component {
   }
   render() {
     return (
-      <nav className='cyan'>
-        <div className='nav-wrapper'>
-          <NavLink to='/' className='brand-logo'>Flor Lafuente</NavLink>
-          <ul id='nav-mobile' className='right hide-on-med-and-down'>
-          {this.links.map((link, i) => (
-            <MenuItem
-              path={link.path}
-              name={link.name} />
-          ))}
-          </ul>
-        </div>
+      <nav>
+        {this.links.map((link, i) => (
+          <MenuItem
+            path={link.path}
+            name={link.name} />
+        ))}
       </nav>
     )
   }
