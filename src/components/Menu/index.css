@@ -1,5 +1,7 @@
 .menu-container {
+  align-self: flex-end;
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 20px 0;
 }

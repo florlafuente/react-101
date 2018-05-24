@@ -1,9 +1,10 @@
 .avatar-container {
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  margin: 150px;
+  justify-content: center;
+  height: 80%;
 }
 
 .avatar-img {

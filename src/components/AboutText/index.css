@@ -1,0 +1,13 @@
+.about-text-container {
+  width: 420px;
+  text-align: left;
+}
+
+.about-text-paragraph {
+  margin-top: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #263238;
+  line-height: 1.6;
+}

@@ -1,8 +1,9 @@
 import React from 'react'
+import AboutText from '../components/AboutText'
 
 export default () => (
   <div>
-    <p>Soy About</p>
+    <AboutText />
   </div>
 )
 

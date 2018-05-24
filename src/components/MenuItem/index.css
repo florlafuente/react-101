@@ -14,3 +14,9 @@
 .menu-item-active {
   font-weight: bold;
 }
+
+@media (max-width: 425px) {
+  .menu-item {
+    font-size: 12px;
+  }
+}
