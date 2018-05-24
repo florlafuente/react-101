@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { NavLink } from 'react-router-dom'
 import MenuItem from '../MenuItem'
+
 
 export default class extends Component {
   constructor(props){
