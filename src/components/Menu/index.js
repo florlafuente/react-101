@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MenuItem from '../MenuItem'
-
+import './index.css'
 
 export default class extends Component {
   constructor(props){
@@ -26,7 +26,7 @@ export default class extends Component {
   }
   render() {
     return (
-      <nav>
+      <nav className='menu-container'>
         {this.links.map((link, i) => (
           <MenuItem
             path={link.path}

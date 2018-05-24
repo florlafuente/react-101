@@ -1,0 +1,16 @@
+.menu-item {
+  margin: 0 20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #ee6e73;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  font-weight: bold;
+}
+
+.menu-item-active {
+  font-weight: bold;
+}
