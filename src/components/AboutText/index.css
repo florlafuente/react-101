@@ -9,5 +9,15 @@
   font-size: 16px;
   font-weight: 300;
   color: #263238;
-  line-height: 1.6;
+  line-height: 2;
+}
+
+.about-text-link {
+  color: #263238;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.about-text-link:hover {
+  color: #ee6e73;
 }
