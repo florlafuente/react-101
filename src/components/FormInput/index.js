@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default ({ type, name, value, onChange, label }) => (
-  <div>
+  <div className='input-container'>
     <label htmlFor={name}>
       {label}
     </label>

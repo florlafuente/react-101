@@ -29,6 +29,7 @@ export default class extends Component {
       <nav className='menu-container'>
         {this.links.map((link, i) => (
           <MenuItem
+            key={i}
             path={link.path}
             name={link.name} />
         ))}
