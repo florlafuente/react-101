@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import FormInput from '../FormInput'
 import FormMessage from '../FormMessage'
+import Textarea from '../Textarea'
+import './index.css'
 
 export default class extends Component {
   state = {
@@ -50,7 +52,7 @@ export default class extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         {this.state.status !== 'init' &&
-        <FormMessage status={this.state.status}/>
+          <FormMessage status={this.state.status}/>
         }
         <FormInput
           type='text'
@@ -64,8 +66,7 @@ export default class extends Component {
           value={this.state.email}
           onChange={this.handleInputChange}
           label='E-mail' />
-        <FormInput
-          type='text'
+        <Textarea 
           name='message'
           value={this.state.message}
           onChange={this.handleInputChange}

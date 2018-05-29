@@ -1,15 +1,13 @@
 import React from 'react'
 
-export default ({ type, name, value, onChange, label }) => (
+export default ({ name, value, onChange, label }) => (
   <div className='input-container'>
     <label htmlFor={name}>
       {label}
     </label>
-    <input
-      type={type}
+    <textarea
       name={name}
       value={value}
-      onChange={onChange}
-      autoComplete={name} />
+      onChange={onChange} />
   </div>
 )
