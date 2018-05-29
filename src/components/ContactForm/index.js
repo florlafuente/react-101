@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import FormInput from '../FormInput'
+import FormMessage from '../FormMessage'
 
 export default class extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      'name': '',
-      'email': '',
-      'message': ''
-    }
+  state = {
+    'name': '',
+    'email': '',
+    'message': '',
+    'status': 'init'
   }
 
   handleInputChange = (e) => {
@@ -22,19 +21,37 @@ export default class extends Component {
     e.preventDefault()
     try {
       const res = await axios.post('https://flor-api.now.sh/mailer', {
-        'headers': {
-          'Access-Control-Allow-Origin': '*'
-        }
+        'name': this.state.name,
+        'email': this.state.email,
+        'message': this.state.message
       })
-      console.log(res)
+     this.setStatus('success')
     } catch (err) {
-      console.error(err)
+      this.setStatus('fail')
     }
+  }
+
+  setStatus = (status) => {
+    this.setState({
+      status: status,
+    }, this.restartForm())
+  }
+
+  restartForm = () => {
+    setTimeout(() => this.setState({
+      'name': '',
+      'email': '',
+      'message': '',
+      'status': 'init'
+    }), 4000)
   }
 
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
+        {this.state.status !== 'init' &&
+        <FormMessage status={this.state.status}/>
+        }
         <FormInput
           type='text'
           name='name'
