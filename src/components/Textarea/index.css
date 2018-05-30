@@ -1,0 +1,39 @@
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.textarea-label {
+  color: #263238;
+  align-self: flex-start;
+  margin-left: 55px;
+  position: absolute;
+  font-size: 14px;
+  z-index: 0;
+}
+
+textarea.textarea-input {
+  width: 75%;
+  border: none;
+  border-bottom: 1px solid #263238;
+  width: 75%;
+  height: 25px;
+  font-size: 18px;
+  color: #263238;
+  z-index: 1;
+  background: transparent;
+}
+
+textarea.textarea-input:focus {
+  outline-width: 0;
+  border-bottom: 2px solid #ee6e73;
+}
+
+textarea.textarea-input:focus + .textarea-label {
+  font-size: 12px;
+  color: #ee6e73;
+  margin-top: -10px;
+}
