@@ -1,15 +1,19 @@
 import React from 'react'
+import './index.css'
 
 export default ({ type, name, value, onChange, label }) => (
   <div className='input-container'>
-    <label htmlFor={name}>
-      {label}
-    </label>
     <input
+      className='form-input'
       type={type}
       name={name}
       value={value}
       onChange={onChange}
       autoComplete={name} />
+    <label
+      htmlFor={name}
+      className='form-label'>
+      {label}
+    </label>
   </div>
 )
