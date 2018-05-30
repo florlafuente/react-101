@@ -21,7 +21,8 @@ textarea.textarea-input {
   border-bottom: 1px solid #263238;
   width: 75%;
   height: 25px;
-  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
   color: #263238;
   z-index: 1;
   background: transparent;
@@ -35,5 +36,16 @@ textarea.textarea-input:focus {
 textarea.textarea-input:focus + .textarea-label {
   font-size: 12px;
   color: #ee6e73;
-  margin-top: -10px;
+  margin-top: -15px;
+}
+
+textarea.textarea-input.active {
+  outline-width: 0;
+  border-bottom: 2px solid #ee6e73;
+}
+
+textarea.textarea-input.active + .textarea-label {
+  font-size: 12px;
+  color: #ee6e73;
+  margin-top: -15px;
 }

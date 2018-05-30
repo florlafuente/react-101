@@ -4,7 +4,7 @@ import './index.css'
 export default ({ type, name, value, onChange, label }) => (
   <div className='input-container'>
     <input
-      className='form-input'
+      className={`form-input ${value !== '' ? 'active' : ''}`}
       type={type}
       name={name}
       value={value}

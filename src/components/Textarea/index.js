@@ -4,7 +4,7 @@ import './index.css'
 export default ({ name, value, onChange, label }) => (
   <div className='textarea-container'>
     <textarea
-      className='textarea-input'
+      className={`textarea-input ${value !== '' ? 'active' : ''}`}
       name={name}
       value={value}
       onChange={onChange} />

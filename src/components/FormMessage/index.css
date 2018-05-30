@@ -1,0 +1,13 @@
+.form-message-container {
+  background: #ee6e73;
+  font-family: 'Roboto', sans-serif;
+  color: #FFF;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
