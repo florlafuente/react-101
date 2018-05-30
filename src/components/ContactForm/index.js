@@ -3,6 +3,7 @@ import axios from 'axios'
 import FormInput from '../FormInput'
 import FormMessage from '../FormMessage'
 import Textarea from '../Textarea'
+import Button from '../Button'
 import './index.css'
 
 export default class extends Component {
@@ -71,7 +72,9 @@ export default class extends Component {
           value={this.state.message}
           onChange={this.handleInputChange}
           label='Message' />
-          <input type='submit' value='Send' />
+        <Button
+          action={this.handleSubmit}
+          value={'Send'} />
       </form>
     )
   }
