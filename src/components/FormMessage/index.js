@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './index.css'
 
-export default ({ status }) => (
+const FormMessage = ({ status }) => (
   <div className='form-message-container'>
     <p className='form-message-text'>
       { status === 'success' ?
@@ -11,3 +12,9 @@ export default ({ status }) => (
     </p>
   </div>
 )
+
+FormMessage.propTypes = {
+  'status': PropTypes.string.isRequired
+}
+
+export default FormMessage

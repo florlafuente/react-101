@@ -1,7 +1,8 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './index.css'
 
-export default ({ type, name, value, onChange, label }) => (
+const FormInput = ({ type, name, value, onChange, label }) => (
   <div className='input-container'>
     <input
       className={`form-input ${value !== '' ? 'active' : ''}`}
@@ -17,3 +18,13 @@ export default ({ type, name, value, onChange, label }) => (
     </label>
   </div>
 )
+
+FormInput.propTypes = {
+  'type': PropTypes.string.isRequired,
+  'name': PropTypes.string.isRequired,
+  'value': PropTypes.string.isRequired,
+  'onChange': PropTypes.func.isRequired,
+  'label': PropTypes.string.isRequired,
+}
+
+export default FormInput
