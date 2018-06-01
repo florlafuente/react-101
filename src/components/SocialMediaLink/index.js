@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default ({ src, link}) => (
+export default ({ icon, link}) => (
   <a href={link} target='blank'>
-    <img src={src} />
+    <span className={icon} />
   </a>
 )

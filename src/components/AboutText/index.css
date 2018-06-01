@@ -21,3 +21,9 @@
 .about-text-link:hover {
   color: #ee6e73;
 }
+
+@media (max-width: 425px) {
+  .about-text-container {
+    width: 320px;
+  }
+}
