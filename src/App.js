@@ -11,10 +11,6 @@ export default () => (
   <Router>
     <div className='App'>
       <Route exact path='/' component={Home} />
-      <Route path='/about' component={About} />
-      <Route path='/api-example' component={ApiExample} />
-      <Route path='/contact' component={Contact} />
-      <Menu />
     </div>
   </Router>
 )
